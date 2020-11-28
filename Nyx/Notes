@@ -1,0 +1,86 @@
+World Structure
+    Element Structure
+        TileElement: <props>
+        AreaElement: <props>|<TileElement...>
+        SegmentElement: <props>|<AreaElement...>
+        WorldElement: <props>|<SegmentElement...>
+
+    Example Example:
+        0 0 
+        0 0
+
+        TileElement
+        <0>
+        AreaElement
+        <2:2>|<
+            4>[<0>]
+        >
+        SegmentElement
+        <1:1>|<
+            1[<2:2>|<
+                4[<0>]
+            >]
+        >
+        WorldElement
+        <1:1>|<
+            1[<1:1>|<
+                1[<2:2>|<
+                    4[<0>]
+                >]
+            >]
+        >
+
+    WorldElement Structure
+        <props>|<
+            #S[<props>|<
+                #A[<props>|<
+                    #T[<props>
+                    .T.
+                    #T[<props>]
+                >]
+                .A.
+            #A[<props>|<
+                    #T[<props>]
+                    .T.
+                    #T[<props>]
+                >]
+            >]
+            .S.
+            #S[<props>|<
+                #A[<props>|<
+                    #T[<props>]
+                    .T.
+                    #T[<props>]
+                >]
+                .A
+            #A[<props><
+                    #T[<props>}
+                    .T.
+                    #T[<props>]
+                >]
+            >]
+        >
+
+    WorldElement Example
+        <props>|<
+            [<props>|<
+                [<props>|<
+                    [<props>]<t>
+                    [<props>]
+                >]<s>
+                [<props>|<
+                    [<props>]<t>
+                    [<props>]
+                >]
+            >]<w>
+            [<props>|<
+                [<props>|<
+                    [<props>]<t>
+                    [<props>]
+                >]<s>
+            [<props><
+                    [<props>]<t>
+                    [<props>]
+                >]
+            >]
+        >
